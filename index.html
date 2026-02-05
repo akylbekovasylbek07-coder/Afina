@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Демо Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+
+<!-- ################################################################################################################################################################################################################################ -->
+
+<header class="header">
+    <div class="container header__container">
+        <input type="checkbox" id="burger-check" class="burger-check">
+
+        <label for="burger-check" class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <!-- <a href="#" class="logo">KAIZEN<span class="accent-dot">.</span></a> -->
+
+        <nav class="nav" id="nav">
+            <ul class="nav__list">
+                <li class="nav_item"><a href="#" class="nav_link" style="color: rgb(0, 0, 0); text-decoration: none;margin-right: 50px;">Ожерелье</a></li>
+                <li class="nav_item"><a href="#" class="nav_link" style="color: rgb(0, 0, 0); text-decoration: none;margin-right: 50px;">Кольца</a></li>
+                <li class="nav_item"><a href="#" class="nav_link" style="color: rgb(0, 0, 0); text-decoration: none;margin-right: 50px;">Серьги</a></li>
+                <li class="nav_item"><a href="#" class="nav_link" style="color: rgb(0, 0, 0); text-decoration: none;margin-right: 50px;">Браслеты</a></li>
+                <li class="nav_item"><a href="#" class="nav_link" style="color: rgb(0, 0, 0); text-decoration: none;margin-right: 50px;">Контакты</a></li>
+                <li class="nav_item"><a href="#" class="nav_link" style="color: rgb(0, 0, 0); text-decoration: none;margin-right: 50px;">Инстаграм</a></li>
+            </ul>
+        </nav>
+
+        <a href="tel:+79990000000" class="btn btn--outlined header__btn">Магазин</a>
+    </div>
+</header>
+
+
+<!-- 
+<header class="hero-section">
+    <div class="hero-content fade-in">
+        <h1>Искусство в деталях</h1>
+        <p>Новая коллекция золота и бриллиантов</p>
+        <a href="#collections" class="btn">Смотреть каталог</a>
+    </div>
+</header> -->
+
+<header class="hero-section">
+    <video autoplay muted loop playsinline class="hero-video">
+        <source src="assets/header.mp4"  type="video/mp4">
+    </video>
+
+    <div class="hero-content">
+        <h1>Совершенство формы</h1>
+        <p>Новая коллекция серебра и белого золота</p>
+        <a href="#new" class="btn">Смотреть новинки</a>
+    </div>
+</header>
+
+
+<section class="banner-carousel">
+    <div class="carousel-wrapper">
+        
+        <button class="arrow-btn prev-btn" onclick="slideLeft()">
+            &#10094; </button>
+
+        <div class="carousel-track" id="slider">
+            
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?q=80&w=1200&auto=format&fit=crop" alt="Скупка золота">
+                <div class="slide-content">
+                    <h2>Скупка золотых изделий</h2>
+                    <p>Выгодные цены и мгновенная оценка</p>
+                    <a href="#" class="btn-slide">Узнать цену</a>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1200&auto=format&fit=crop" alt="Новая коллекция">
+                <div class="slide-content">
+                    <h2>Бриллиантовая осень</h2>
+                    <p>Скидки до 30% на комплекты</p>
+                    <a href="#" class="btn-slide">В каталог</a>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=1200&auto=format&fit=crop" alt="Подарки">
+                <div class="slide-content">
+                    <h2>Идеальный подарок</h2>
+                    <p>Подарочные сертификаты от 5000 ₽</p>
+                    <a href="#" class="btn-slide">Купить</a>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="arrow-btn next-btn" onclick="slideRight()">
+            &#10095; </button>
+
+    </div>
+</section>
+
+<script>
+    const slider = document.getElementById('slider');
+
+    function slideRight() {
+        // Листаем вправо на ширину экрана
+        slider.scrollBy({ left: slider.offsetWidth, behavior: 'smooth' });
+    }
+
+    function slideLeft() {
+        // Листаем влево
+        slider.scrollBy({ left: -slider.offsetWidth, behavior: 'smooth' });
+    }
+</script>
+
+
+<section class="categories-section">
+    <h2 class="section-title">категории</h2>
+    
+    <div class="categories-grid">
+        <a href="#" class="category-item">
+            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=600" alt="Серьги">
+            <span class="category-name">серьги</span>
+        </a>
+
+        <a href="#" class="category-item">
+            <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=600" alt="Браслеты">
+            <span class="category-name">браслеты</span>
+        </a>
+
+        <a href="#" class="category-item">
+            <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=600" alt="Ожерелья">
+            <span class="category-name">ожерелья</span>
+        </a>
+
+        <a href="#" class="category-item">
+            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=600" alt="Кольца">
+            <span class="category-name">кольца</span>
+        </a>
+        
+        <a href="#" class="category-item">
+            <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=600" alt="Ожерелья">
+            <span class="category-name">ожерелья</span>
+        </a>
+
+    </div>
+</section>
+
+
+
+
+<section class="feature-grid-section">
+    <div class="feature-container">
+        
+        <div class="feature-large">
+            <div class="zoom-wrapper">
+                <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=800" alt="Model Jewelry">
+            </div>
+            <div class="feature-text">
+                <h3>смелый дизайн. блестящие драгоценные камни.</h3>
+            </div>
+        </div>
+
+        <div class="feature-small-col">
+            <div class="feature-product">
+                <img src="https://img.freepik.com/free-photo/jewelry-gold-ring-isolated-white-background_123827-27691.jpg?semt=ais_hybrid&w=740" alt="Ring Gold">
+                <a href="#" class="shop-link">Магазин</a>
+            </div>
+            
+            <div class="feature-product">
+                <img src="https://basket-04.wbbasket.ru/vol546/part54601/54601440/images/big/1.webp" alt="Ring Silver">
+                <a href="#" class="shop-link">Магазин</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+<section class="split-section">
+    <div class="split-image">
+        <img src="https://i.pinimg.com/736x/a9/c0/0f/a9c00f9367072a2b1fbf1ef4aebd656a.jpg" alt="Gold Jewelry Model">
+    </div>
+
+    <div class="split-content">
+        <span class="subtitle">Вступление</span>
+        <h2>Послесловие</h2>
+        <p>Там, где смелое золото сочетается с женственной уверенностью. <br>
+        Создано, чтобы вдохновлять вас в любой момент. От вечернего блеска до повседневного сияния.</p>
+        <a href="#" class="btn-black">Перейти в магазин</a>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<section class="video-parallax-section">
+    <div class="video-sticky-wrapper">
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="assets/ne_header.mp4" type="video/mp4">
+        </video>
+
+        
+        <div class="video-overlay">
+            <div class="video-content">
+                <h2>Наша философия</h2>
+                <p>Мы создаем украшения, которые рассказывают вашу историю</p> 
+                <p>Каждое изделие — это сочетание традиций ювелирного мастерства и современного дизайна</p> 
+                <a href="#" class="btn-black">Перейти в магазин</a>
+            </div>
+        </div>
+
+        
+    </div>
+
+    
+</section>
+
+
+
+
+<section class="brands-section">
+    <h2 class="section-title">Бренды</h2>
+    
+    <div class="brands-container">
+        <div class="brands-row">
+            <div class="brand-item">
+                <img src="https://embit.ru/wp-content/uploads/2025/01/1160888.png" alt="Sanis Jewelry">
+            </div>
+            <div class="brand-item">
+                <img src="https://embit.ru/wp-content/uploads/2025/01/1160888.png" alt="Klondike">
+            </div>
+            <div class="brand-item">
+                <img src="https://embit.ru/wp-content/uploads/2025/01/1160888.png" alt="Klondike">
+            </div>
+
+            <div class="brand-item">
+                <img src="https://embit.ru/wp-content/uploads/2025/01/1160888.png" alt="Klondike">
+            </div>
+           
+        </div>
+
+        <div class="brands-row">
+           
+
+            <div class="brand-item">
+                <img src="https://embit.ru/wp-content/uploads/2025/01/1160888.png" alt="Klondike">
+            </div>
+            <div class="brand-item">
+                <img src="https://embit.ru/wp-content/uploads/2025/01/1160888.png" alt="Klondike">
+            </div>
+            <div class="brand-item">
+                <img src="https://embit.ru/wp-content/uploads/2025/01/1160888.png" alt="Klondike">
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+<section class="lookbook-section">
+    <div class="lookbook-container">
+        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=1200" alt="Lookbook Model" class="lookbook-bg">
+
+        <div class="hotspot-wrapper" style="top: 45%; left: 55%;">
+            <input type="checkbox" id="item1" class="hotspot-input">
+            <label for="item1" class="hotspot-dot"></label>
+            
+            <div class="hotspot-card">
+                <img src="https://images.unsplash.com/photo-1605100804763-247f67b3f876?q=80&w=200" alt="Product">
+                <div class="hotspot-info">
+                    <h4>Кольцо "Moonlight"</h4>
+                    <p>18 000 ₽</p>
+                    <a href="#">В корзину</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hotspot-wrapper" style="top: 30%; left: 45%;">
+            <input type="checkbox" id="item2" class="hotspot-input">
+            <label for="item2" class="hotspot-dot"></label>
+            
+            <div class="hotspot-card">
+                <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=200" alt="Product">
+                <div class="hotspot-info">
+                    <h4>Серьги "Grace"</h4>
+                    <p>12 500 ₽</p>
+                    <a href="#">В корзину</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="location-section">
+    <div class="container location-container">
+        <div class="location-frame">
+            <div class="map-wrapper">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2000.653456789!2d30.315865!3d59.939095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTnCsDU2JzIwLjciTiAzMMKwMTgnNTcuMSJF!5e0!3m2!1sru!2sru!4v1620000000000!5m2!1sru!2sru" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="promo-content">
+            <h3>Индивидуальный подбор</h3>
+            <p>Не знаете, что выбрать? Наши стилисты помогут подобрать идеальное украшение</p>
+            <button class="btn">Адрес</button>
+            <button class="btn btn-outline">Каталог</button>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="blog-section container">
+    <h2>Журнал</h2>
+    <div class="blog-grid">
+        <article class="blog-post">
+            <div class="blog-img"><img src="https://img.freepik.com/free-photo/jewelry-gold-ring-isolated-white-background_123827-27690.jpg?semt=ais_hybrid&w=740" alt="Blog 1"></div>
+            <h4>Как ухаживать за золотом</h4>
+            <p>Советы экспертов...</p>
+        </article>
+        <article class="blog-post">
+            <div class="blog-img"><img src="https://i.pinimg.com/originals/90/3b/a0/903ba0ed363c2edc26a2e3e06849d5ae.jpg" alt="Blog 2"></div>
+            <h4>Тренды 2024 года</h4>
+            <p>Что будет модно...</p>
+        </article>
+        <article class="blog-post">
+            <div class="blog-img"><img src="https://serebro-shop.ru/image/cache/catalog/pics/32/40/0ef8e93e86f185d11649c9a36ffd-1000x1000.jpg" alt="Blog 3"></div>
+            <h4>История бриллиантов</h4>
+            <p>Путь камня...</p>
+        </article>
+    </div>
+</section>
+
+
+
+
+<section class="benefits-section">
+    <div class="container">
+        <div class="benefits-grid">
+            
+            <div class="benefit-item">
+                <div class="benefit-icon">🚚</div>
+                <h3>Бесплатная доставка по стране</h3>
+                <p>Доставка Ылдам экспресс в течение 2 дней для всех заказов внутри страны, независимо от суммы покупки.</p>
+            </div>
+
+            <div class="benefit-item">
+                <div class="benefit-icon">🎧</div>
+                <h3>Служба поддержки</h3>
+                <p>Мы готовы ответить на ваши вопросы с понедельника по пятницу.</p>
+            </div>
+
+            <div class="benefit-item">
+                <div class="benefit-icon">🛡️</div>
+                <h3>Безопасная оплата</h3>
+                <p>Ваша платежная информация обрабатывается в безопасном режиме.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<footer class="main-footer">
+    <div class="container">
+        <div class="footer-grid">
+            
+            <div class="footer-col">
+                <h3>Обслуживание клиентов</h3>
+                <ul>
+                    <li><a href="#">Служба поддержки</a></li>
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                    <li><a href="#">Правила возврата</a></li>
+                    <li><a href="#">Условия предоставления услуг</a></li>
+                    <li><a href="#">Блог</a></li>
+                    <li><a href="#">О нас</a></li>
+                </ul>
+                
+               
+            </div>
+
+            <div class="footer-col newsletter-col">
+                <h3>Рассылка</h3>
+                <p>Присоединяйтесь к нашему списку, чтобы быть в курсе последних новинок. Зарегистрируйтесь сегодня и получите скидку 10 % на первый заказ. *</p>
+                <form class="subscribe-form">
+                    
+                    <button type="submit" class="btn-subscribe">В магазин</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright">© 2026 — Все прова зашищены Создано : Ойчиев Э. , Кадыров А.</p>
+            <div class="payment-icons">
+                <span class="pay-card">AMEX</span>
+                <span class="pay-card">ApplePay</span>
+                <span class="pay-card">Visa</span>
+                <span class="pay-card">MasterCard</span>
+                <span class="pay-card">PayPal</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        const burgerCheck = document.getElementById('burger-check');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50 && burgerCheck.checked) {
+                burgerCheck.checked = false;
+            }
+        });
+    </script>
+
+</body>
+</html>
