@@ -1,0 +1,421 @@
+/* --- Стили для Shop Page --- */
+
+/* 1. Верхний тикер */
+.top-ticker {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: #333;
+}
+.ticker-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #ccc;
+}
+
+/* 2. Белый хедер (отличается от прозрачного на главной) */
+.shop-header {
+    background-color: #fff;
+    padding: 20px 40px;
+    border-bottom: 1px solid transparent; /* Можно включить #eee если нужна линия */
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.jj-logo {
+    font-family: 'Playfair Display', serif; /* Или твой рукописный шрифт */
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    border: 2px solid #000; /* Имитация лого */
+    padding: 5px 10px;
+    border-radius: 5px; /* Немного скруглим как подпись */
+}
+
+.shop-nav {
+    display: flex;
+    gap: 25px;
+}
+
+.shop-nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.shop-nav a:hover {
+    color: var(--primary-gold);
+}
+
+.header-icons {
+    display: flex;
+    gap: 20px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* 3. Основной контент */
+.shop-container {
+    max-width: 1400px; /* Широкий контейнер */
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.breadcrumbs {
+    margin-top: 30px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: #999;
+    letter-spacing: 1px;
+}
+.breadcrumbs a {
+    text-decoration: none;
+    color: #999;
+}
+.breadcrumbs span {
+    color: #333;
+}
+
+.page-title {
+    text-align: center;
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 40px 0 60px;
+    font-weight: normal;
+    color: #333;
+}
+
+/* 4. Подкатегории (Кругляши) */
+.sub-categories {
+    display: flex;
+    justify-content: center; /* По центру */
+    gap: 50px; /* Большие отступы */
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+}
+
+.sub-cat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    width: 150px;
+    transition: transform 0.3s;
+}
+
+.sub-cat-item:hover {
+    transform: translateY(-10px);
+}
+
+.sub-cat-img {
+    width: 100%;
+    height: 120px; /* Высота под ожерелье */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.sub-cat-img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Чтобы ожерелье не обрезалось */
+}
+
+.sub-cat-item span {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* 5. Панель инструментов (Toolbar) */
+.toolbar-wrapper {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.toolbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.view-toggles {
+    display: flex;
+    gap: 15px;
+}
+
+.view-btn {
+    border: none;
+    background: none;
+    color: #999;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.view-btn:hover {
+    color: #333;
+}
+
+.sort-filter-area {
+    display: flex;
+    gap: 0; /* Склеены вместе или через бордер */
+}
+
+.sort-dropdown {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-right: 1px solid #eee;
+}
+
+.filter-btn {
+    border: none;
+    background: none;
+    padding-left: 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+/* Адаптив для этой страницы */
+@media (max-width: 992px) {
+    .shop-header {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .shop-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .sub-categories {
+        gap: 20px;
+    }
+    .sub-cat-item {
+        width: 45%; /* По 2 в ряд на телефоне */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Сетка товаров (Shop Grid) --- */
+.shop-grid-section {
+    padding: 40px 0 80px;
+    background-color: #fff;
+}
+
+.products-grid {
+    display: grid;
+    /* 4 колонки равной ширины */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px; /* Расстояние между карточками */
+    margin-bottom: 60px;
+}
+
+/* Карточка товара */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    group: relative;
+}
+
+/* Обертка картинки */
+.product-image-wrapper {
+    position: relative;
+    width: 100%;
+    /* Квадратные картинки (можно сделать 4:5, изменив padding-bottom на 125%) */
+    padding-bottom: 100%; 
+    background-color: #f4f4f4;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.product-image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.4s ease-in-out, transform 0.4s;
+}
+
+/* Эффект смены фото при наведении */
+.hover-img {
+    opacity: 0; /* Скрыта по умолчанию */
+}
+
+.product-card:hover .hover-img {
+    opacity: 1; /* Показывается при наведении */
+    transform: scale(1.05); /* Легкий зум */
+}
+
+/* Бейджи (New, Sale) */
+.product-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    z-index: 2;
+}
+
+.product-badge.new { background: #fff; color: #000; }
+.product-badge.sale { background: #d9534f; color: #fff; } /* Красный */
+.product-badge.sold-out { background: #333; color: #fff; opacity: 0.8; }
+
+/* Кнопка "В избранное" (сердечко) */
+.wishlist-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #fff;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0; /* Скрыта пока не наведешь */
+    transition: 0.3s;
+    z-index: 2;
+}
+
+.wishlist-btn:hover {
+    color: var(--primary-gold);
+}
+
+.product-card:hover .wishlist-btn {
+    opacity: 1; /* Появляется при наведении на карточку */
+}
+
+/* Информация о товаре */
+.product-details {
+    text-align: center;
+}
+
+.vendor-name {
+    display: block;
+    font-size: 0.7rem;
+    color: #999;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.product-title {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    color: #1a1a1a;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.product-title:hover {
+    color: var(--primary-gold);
+}
+
+.product-price {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 8px;
+    font-weight: normal;
+}
+
+/* Пагинация (цифры внизу) */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.page-link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #eee;
+    font-family: var(--font-sans);
+    transition: 0.3s;
+}
+
+.page-link:hover, .page-link.active {
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+.dots {
+    color: #999;
+    letter-spacing: 2px;
+}
+
+/* Адаптивность сетки */
+@media (max-width: 992px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки на планшете */
+    }
+}
+
+@media (max-width: 500px) {
+    .products-grid {
+        grid-template-columns: repeat(1, 1fr); /* 1 колонка на телефоне */
+    }
+}
