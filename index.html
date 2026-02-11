@@ -3,43 +3,47 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Демо Bootstrap</title>
+    <title>Affa Jewellery   -</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   </head>
   <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="rings.css">
     <link rel="stylesheet" href="main.css">
 
 <!-- ################################################################################################################################################################################################################################ -->
 
-<header class="header">
-    <div class="container header__container">
-        <input type="checkbox" id="burger-check" class="burger-check">
+<div class="top-ticker">
+    <button class="ticker-btn"><i class="fas fa-chevron-left"></i></button>
+    <span>БЕСПЛАТНАЯ ДОСТАВКА ПО СТРАНЕ ЗА 2 ДНЯ</span>
+    <button class="ticker-btn"><i class="fas fa-chevron-right"></i></button>
+</div>
 
-        <label for="burger-check" class="burger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
 
-        <!-- <a href="#" class="logo">KAIZEN<span class="accent-dot">.</span></a> -->
+<header class="shop-header">
+        <div class="header-inner">
+            <div class="logo-area">
+                <a href="index.html" class="affa-logo">Affa Jewellery</a>
+            </div>
+            
+            <nav class="shop-nav">
+                <a href="earrings.html">Серьги</a>
+                <a href="bracelets.html">Браслеты</a>
+                <a href="rings.html">Кольца</a>
+                <a href="necklace.html">Ожерелья</a>
+                <a href="kontact.html">Контакты</a>
+                <a href="https://www.instagram.com/">Инстаграм</a>
+            </nav>
 
-        <nav class="nav" id="nav">
-            <ul class="nav__list">
-                <li class="nav_item"><a href="necklace.html" class="nav_link" style="color: rgb(0, 0, 0); text-decoration: none;margin-right: 50px;">Ожерелье</a></li>
-                <li class="nav_item"><a href="rings.html" class="nav_link" style="color: rgb(0, 0, 0); text-decoration: none;margin-right: 50px;">Кольца</a></li>
-                <li class="nav_item"><a href="earrings.html" class="nav_link" style="color: rgb(0, 0, 0); text-decoration: none;margin-right: 50px;">Серьги</a></li>
-                <li class="nav_item"><a href="bracelets.html" class="nav_link" style="color: rgb(0, 0, 0); text-decoration: none;margin-right: 50px;">Браслеты</a></li>
-                <li class="nav_item"><a href="" class="nav_link" style="color: rgb(0, 0, 0); text-decoration: none;margin-right: 50px;">Контакты</a></li>
-                <li class="nav_item"><a href="#" class="nav_link" style="color: rgb(0, 0, 0); text-decoration: none;margin-right: 50px;">Инстаграм</a></li>
-            </ul>
-        </nav>
-
-        <a href="tel:+79990000000" class="btn btn--outlined header__btn">Магазин</a>
-    </div>
-</header>
-
+            <div class="header-icons">
+                <i style="color: black;" class="bi bi-whatsapp"></i>
+                <i class="bi bi-whatsapp"></i>
+                <i class="bi bi-whatsapp"></i>
+            </div>
+        </div>
+    </header>
 
 <!-- 
 <header class="hero-section">
@@ -56,8 +60,9 @@
     </video>
 
     <div class="hero-content">
-        <h1>Совершенство формы</h1>
-        <p>Новая коллекция серебра и белого золота</p>
+        <p class="hero-kicker">каждый день, везде</p>
+        <h1>Affa Jewellery</h1>
+        <p>Ювелирные украшения</p>
         <a href="#new" class="btn">Смотреть новинки</a>
     </div>
 </header>
@@ -72,29 +77,20 @@
         <div class="carousel-track" id="slider">
             
             <div class="slide">
-                <img src="https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?q=80&w=1200&auto=format&fit=crop" alt="Скупка золота">
-                <div class="slide-content">
-                    <h2>Скупка золотых изделий</h2>
-                    <p>Выгодные цены и мгновенная оценка</p>
-                    <a href="#" class="btn-slide">Узнать цену</a>
-                </div>
-            </div>
-
-            <div class="slide">
-                <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1200&auto=format&fit=crop" alt="Новая коллекция">
+                <img src="https://basket-19.wbbasket.ru/vol3107/part310753/310753366/images/c516x688/1.webp" alt="Новая коллекция">
                 <div class="slide-content">
                     <h2>Бриллиантовая осень</h2>
                     <p>Скидки до 30% на комплекты</p>
-                    <a href="#" class="btn-slide">В каталог</a>
+                    <a href="#new" class="btn-slide">В каталог</a>
                 </div>
             </div>
 
             <div class="slide">
-                <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=1200&auto=format&fit=crop" alt="Подарки">
+                <img src="https://image.kazanexpress.ru/c6uro2kglr11601q7dr0/t_product_high.jpg" alt="Подарки">
                 <div class="slide-content">
                     <h2>Идеальный подарок</h2>
                     <p>Подарочные сертификаты от 5000 ₽</p>
-                    <a href="#" class="btn-slide">Купить</a>
+                    <a href="https://wa.me/79990000000?text=Здравствуйте!%20Я%20пишу%20из%20онлайн-магазина%20Affa%20Jewellery.%20Хочу%20купить%20подарочный%20сертификат." class="btn-slide">Купить в WhatsApp</a>
                 </div>
             </div>
 
@@ -121,35 +117,29 @@
 </script>
 
 
-<section class="categories-section">
-    <h2 class="section-title">категории</h2>
+<section class="categories-section" id="new">
+    <h2 class="section-title"></h2>
     
     <div class="categories-grid">
-        <a href="#" class="category-item">
-            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=600" alt="Серьги">
+        <a href="earrings.html" class="category-item">
+            <img src="https://parure.spb.ru/image/cache/import_files/cf/cf85fd6395bc11eebf3300155d007e00_80e8fddea01f11eebf3300155d007e00-564x564.jpg" alt="Серьги">
             <span class="category-name">серьги</span>
         </a>
 
-        <a href="#" class="category-item">
-            <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=600" alt="Браслеты">
+        <a href="bracelets.html" class="category-item">
+            <img src="https://cs5.livemaster.ru/storage/a2/ce/b4b4467fa9442d659da137bae8yd--ukrasheniya-braslety-iz-krasnogo-i-limonnogo-zolota-585-proby.jpg" alt="Браслеты">
             <span class="category-name">браслеты</span>
         </a>
 
-        <a href="#" class="category-item">
-            <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=600" alt="Ожерелья">
-            <span class="category-name">ожерелья</span>
-        </a>
-
-        <a href="#" class="category-item">
-            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=600" alt="Кольца">
+        <a href="rings.html" class="category-item">
+            <img src="https://jstudio.by/wp-content/uploads/2023/03/kolos.jpg" alt="Кольца">
             <span class="category-name">кольца</span>
         </a>
-        
-        <a href="#" class="category-item">
-            <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=600" alt="Ожерелья">
+
+        <a href="necklace.html" class="category-item">
+            <img src="https://ae04.alicdn.com/kf/Sf7c13791d81f477195cf6c7ee711f253G.jpg_480x480.jpg" alt="Ожерелья">
             <span class="category-name">ожерелья</span>
         </a>
-
     </div>
 </section>
 
@@ -161,7 +151,7 @@
         
         <div class="feature-large">
             <div class="zoom-wrapper">
-                <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=800" alt="Model Jewelry">
+                <img src="https://s.alicdn.com/@sc04/kf/H3592a3ad06e7493995aefe15e26b28481/Pink-Vvs-Moissanite-Solitaire-Engagement-Rings-Princess-Radiant-Emerald-Heart-Oval-Pear-Cut-925-Silver-Diamond-Wedding-Ring.jpg_300x300.jpg" alt="Модель с украшениями">
             </div>
             <div class="feature-text">
                 <h3>смелый дизайн. блестящие драгоценные камни.</h3>
@@ -170,13 +160,13 @@
 
         <div class="feature-small-col">
             <div class="feature-product">
-                <img src="https://img.freepik.com/free-photo/jewelry-gold-ring-isolated-white-background_123827-27691.jpg?semt=ais_hybrid&w=740" alt="Ring Gold">
-                <a href="#" class="shop-link">Магазин</a>
+                <img src="https://cdn.shopify.com/s/files/1/0774/7554/5370/products/wh14919_be7266ee-a069-4b5f-9897-06306cb918e1_480x480.jpg?v=1697180166" alt="Кольцо">
+                <a href="kotolog.html" class="shop-link">В каталог</a>
             </div>
             
             <div class="feature-product">
-                <img src="https://basket-04.wbbasket.ru/vol546/part54601/54601440/images/big/1.webp" alt="Ring Silver">
-                <a href="#" class="shop-link">Магазин</a>
+                <img src="https://images.gmjewelry.store/goods_photo/engagement/1125/1_s.webp" alt="Кольцо">
+                <a href="#new" class="shop-link">В каталог</a>
             </div>
         </div>
 
@@ -188,15 +178,15 @@
 
 <section class="split-section">
     <div class="split-image">
-        <img src="https://i.pinimg.com/736x/a9/c0/0f/a9c00f9367072a2b1fbf1ef4aebd656a.jpg" alt="Gold Jewelry Model">
+        <img src="https://i.pinimg.com/736x/a9/c0/0f/a9c00f9367072a2b1fbf1ef4aebd656a.jpg" alt="Модель с украшениями">
     </div>
 
     <div class="split-content">
-        <span class="subtitle">Вступление</span>
-        <h2>Послесловие</h2>
-        <p>Там, где смелое золото сочетается с женственной уверенностью. <br>
-        Создано, чтобы вдохновлять вас в любой момент. От вечернего блеска до повседневного сияния.</p>
-        <a href="#" class="btn-black">Перейти в магазин</a>
+        <span class="subtitle">Представляем</span>
+        <h2>Послесвечение</h2>
+        <p>Там, где смелое золото встречается с женственной уверенностью. <br>
+        Создано, чтобы вдохновлять вас в любой момент — от вечернего блеска до повседневного сияния.</p>
+        <a href="#new" class="btn-black">Перейти в каталог</a>
     </div>
 </section>
 
@@ -219,7 +209,7 @@
                 <h2>Наша философия</h2>
                 <p>Мы создаем украшения, которые рассказывают вашу историю</p> 
                 <p>Каждое изделие — это сочетание традиций ювелирного мастерства и современного дизайна</p> 
-                <a href="#" class="btn-black">Перейти в магазин</a>
+                <a href="#new" class="btn-black">Перейти в каталог</a>
             </div>
         </div>
 
@@ -232,78 +222,40 @@
 
 
 
-<section class="brands-section">
-    <h2 class="section-title">Бренды</h2>
-    
-    <div class="brands-container">
-        <div class="brands-row">
-            <div class="brand-item">
-                <img src="https://embit.ru/wp-content/uploads/2025/01/1160888.png" alt="Sanis Jewelry">
-            </div>
-            <div class="brand-item">
-                <img src="https://embit.ru/wp-content/uploads/2025/01/1160888.png" alt="Klondike">
-            </div>
-            <div class="brand-item">
-                <img src="https://embit.ru/wp-content/uploads/2025/01/1160888.png" alt="Klondike">
-            </div>
 
-            <div class="brand-item">
-                <img src="https://embit.ru/wp-content/uploads/2025/01/1160888.png" alt="Klondike">
+
+<section class="feature-grid-section">
+    <div class="feature-container">
+        
+        <div class="feature-large">
+            <div class="zoom-wrapper">
+                <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=1200" alt="Лукбук">
             </div>
            
         </div>
 
-        <div class="brands-row">
-           
-
-            <div class="brand-item">
-                <img src="https://embit.ru/wp-content/uploads/2025/01/1160888.png" alt="Klondike">
-            </div>
-            <div class="brand-item">
-                <img src="https://embit.ru/wp-content/uploads/2025/01/1160888.png" alt="Klondike">
-            </div>
-            <div class="brand-item">
-                <img src="https://embit.ru/wp-content/uploads/2025/01/1160888.png" alt="Klondike">
-            </div>
-            
-        </div>
-    </div>
-</section>
-
-
-<section class="lookbook-section">
-    <div class="lookbook-container">
-        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=1200" alt="Lookbook Model" class="lookbook-bg">
-
-        <div class="hotspot-wrapper" style="top: 45%; left: 55%;">
-            <input type="checkbox" id="item1" class="hotspot-input">
-            <label for="item1" class="hotspot-dot"></label>
-            
-            <div class="hotspot-card">
-                <img src="https://images.unsplash.com/photo-1605100804763-247f67b3f876?q=80&w=200" alt="Product">
-                <div class="hotspot-info">
-                    <h4>Кольцо "Moonlight"</h4>
-                    <p>18 000 ₽</p>
-                    <a href="#">В корзину</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="hotspot-wrapper" style="top: 30%; left: 45%;">
-            <input type="checkbox" id="item2" class="hotspot-input">
-            <label for="item2" class="hotspot-dot"></label>
-            
-            <div class="hotspot-card">
-                <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=200" alt="Product">
-                <div class="hotspot-info">
-                    <h4>Серьги "Grace"</h4>
+        <div class="feature-small-col">
+            <div class="feature-product">
+                <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=200" alt="Кольцо">
+                 <h4>Серьги "Грейс"</h4>
                     <p>12 500 ₽</p>
                     <a href="#">В корзину</a>
-                </div>
+            </div>
+            
+            <div class="feature-product">
+                <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=200" alt="Кольцо">
+                 <h4>Серьги "Грейс"</h4>
+                    <p>12 500 ₽</p>
+                    <a href="#">В корзину</a>
             </div>
         </div>
+
     </div>
 </section>
+
+
+
+
 
 
 
@@ -340,64 +292,43 @@
 <section class="about-section">
     <div class="container about-container">
         <div class="about-image">
-            <img src="https://images.unsplash.com/photo-1588444839130-9db07869680c?q=80&w=800" alt="Процесс создания ювелирных изделий">
+            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=800" alt="Affa Jewellery">
         </div>
 
         <div class="about-content">
-            <span class="about-subtitle">Наследие</span>
-            <h2>О нашем бренде</h2>
+            <span class="about-subtitle">Онлайн-магазин</span>
+            <h2>Affa Jewellery</h2>
             <div class="about-divider"></div>
-            <p>Мы создаем украшения, которые становятся частью вашей истории. Каждое изделие проходит через руки опытных мастеров, сочетая в себе старинные традиции и современную эстетику.</p>
-            <p>Наши материалы — это только этичное золото и камни высшей пробы, отобранные вручную для того, чтобы сиять вечно.</p>
-            <a href="#" class="btn-outline">Узнать больше</a>
-        </div>
-    </div>
-</section>
-
-
-<section class="location-section">
-    <div class="container location-container">
-        <div class="location-frame">
-            <div class="map-wrapper">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2000.653456789!2d30.315865!3d59.939095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTnCsDU2JzIwLjciTiAzMMKwMTgnNTcuMSJF!5e0!3m2!1sru!2sru!4v1620000000000!5m2!1sru!2sru" 
-                    width="100%" 
-                    height="100%" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy">
-                </iframe>
-            </div>
-        </div>
-
-        <div class="promo-content">
-            <h3>Индивидуальный подбор</h3>
-            <p>Не знаете, что выбрать? Наши стилисты помогут подобрать идеальное украшение</p>
-            <button class="btn">Адрес</button>
-            <button class="btn btn-outline">Каталог</button>
+            <p>Мы — онлайн-бутик украшений с подбором под стиль и повод. Консультации, подбор комплектов и заказ доступны в мессенджере.</p>
+            <p>Каталог обновляется владельцем: вы всегда видите актуальные модели, цены и наличие.</p>
+            <a href="https://wa.me/79990000000?text=Здравствуйте!%20Я%20пишу%20из%20онлайн-магазина%20Affa%20Jewellery.%20Нужна%20консультация%20по%20подбору%20украшений." class="btn-outline">Получить консультацию</a>
         </div>
     </div>
 </section>
 
 
 
-<section class="blog-section container">
+<section class="blog-section container" id="blog">
     <h2>Журнал</h2>
+    <!-- Добавляйте новые статьи простым копированием блока .blog-post -->
     <div class="blog-grid">
         <article class="blog-post">
-            <div class="blog-img"><img src="https://img.freepik.com/free-photo/jewelry-gold-ring-isolated-white-background_123827-27690.jpg?semt=ais_hybrid&w=740" alt="Blog 1"></div>
+            <div class="blog-img"><img src="https://img.freepik.com/free-photo/jewelry-gold-ring-isolated-white-background_123827-27690.jpg?semt=ais_hybrid&w=740" alt="Статья 1"></div>
             <h4>Как ухаживать за золотом</h4>
-            <p>Советы экспертов...</p>
+            <p class="blog-meta">Советы по уходу и хранению</p>
+            <a href="#" class="blog-link">Читать</a>
         </article>
         <article class="blog-post">
-            <div class="blog-img"><img src="https://i.pinimg.com/originals/90/3b/a0/903ba0ed363c2edc26a2e3e06849d5ae.jpg" alt="Blog 2"></div>
-            <h4>Тренды 2024 года</h4>
-            <p>Что будет модно...</p>
+            <div class="blog-img"><img src="https://i.pinimg.com/originals/90/3b/a0/903ba0ed363c2edc26a2e3e06849d5ae.jpg" alt="Статья 2"></div>
+            <h4>Тренды сезона</h4>
+            <p class="blog-meta">Подборка актуальных форм и материалов</p>
+            <a href="#" class="blog-link">Читать</a>
         </article>
         <article class="blog-post">
-            <div class="blog-img"><img src="https://serebro-shop.ru/image/cache/catalog/pics/32/40/0ef8e93e86f185d11649c9a36ffd-1000x1000.jpg" alt="Blog 3"></div>
+            <div class="blog-img"><img src="https://serebro-shop.ru/image/cache/catalog/pics/32/40/0ef8e93e86f185d11649c9a36ffd-1000x1000.jpg" alt="Статья 3"></div>
             <h4>История бриллиантов</h4>
-            <p>Путь камня...</p>
+            <p class="blog-meta">Коротко о пути камня</p>
+            <a href="#" class="blog-link">Читать</a>
         </article>
     </div>
 </section>
@@ -455,13 +386,13 @@
                 <p>Присоединяйтесь к нашему списку, чтобы быть в курсе последних новинок. Зарегистрируйтесь сегодня и получите скидку 10 % на первый заказ. *</p>
                 <form class="subscribe-form">
                     
-                    <button type="submit" class="btn-subscribe">В магазин</button>
+                    <button type="submit" class="btn-subscribe">Подписаться</button>
                 </form>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <p class="copyright">© 2026 — Все прова зашищены Создано : Ойчиев Э. , Кадыров А.</p>
+            <p class="copyright">© 2026 — Все права защищены Создано : Ойчиев Э. , Кадыров А.</p>
             <div class="payment-icons">
                 <span class="pay-card">AMEX</span>
                 <span class="pay-card">ApplePay</span>
@@ -473,14 +404,14 @@
     </div>
 </footer>
 
-    <script>
-        const burgerCheck = document.getElementById('burger-check');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50 && burgerCheck.checked) {
-                burgerCheck.checked = false;
-            }
-        });
-    </script>
-
-</body>
+    </body>
 </html>
+
+
+
+
+
+
+
+
+

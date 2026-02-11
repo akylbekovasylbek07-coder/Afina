@@ -1,6 +1,10 @@
 /* --- Сброс стилей и Переменные --- */
 :root {
     --primary-gold: #c5a059; /* Золотой цвет как на сайте */
+    --brand-dark: #171513;
+    --brand-dark-2: #0f0f0f;
+    --brand-ivory: #f6f1ea;
+    --brand-line: #e8e2d9;
     --text-dark: #1a1a1a;
     --text-gray: #666;
     --bg-light: #f9f9f9;
@@ -64,6 +68,17 @@ img { max-width: 100%; display: block; object-fit: cover; }
     color: #fff;
 }
 
+.top-ticker {
+    background-color: #fff;
+    border-bottom: 1px solid var(--brand-line);
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #333;
+}
+
 /* --- Навигация --- */
 .navbar {
     display: flex;
@@ -81,12 +96,31 @@ img { max-width: 100%; display: block; object-fit: cover; }
     
 }
 
+.header--light {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    border-bottom: 1px solid var(--brand-line);
+}
+
 .logo {
     font-family: var(--font-serif);
     font-size: 1.5rem;
     font-weight: bold;
     letter-spacing: 2px;
     color: white;
+}
+
+.brand-logo {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #111;
+    text-decoration: none;
+    margin-right: 30px;
+    white-space: nowrap;
 }
 
 .nav-links {
@@ -122,6 +156,14 @@ img { max-width: 100%; display: block; object-fit: cover; }
     position: relative;
     z-index: 1;
     color: #fff;
+}
+
+.hero-kicker {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.75rem;
+    margin-bottom: 14px;
+    color: rgba(255, 255, 255, 0.85);
 }
 
 .hero-content h1 {
@@ -318,12 +360,14 @@ body {
     font-weight: normal;
     margin-bottom: 30px;
     color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 /* Сетка из 4-х элементов */
 .categories-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 4 равные колонки */
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px; /* Расстояние между картинками */
 }
 
@@ -850,7 +894,7 @@ body {
 
 .lookbook-container {
     position: relative;
-    width: 100%;
+    width: 80%;
 }
 
 .lookbook-bg {
@@ -858,102 +902,6 @@ body {
     display: block;
 }
 
-/* Скрываем чекбокс */
-.hotspot-input {
-    display: none;
-}
-
-/* Обертка точки */
-.hotspot-wrapper {
-    position: absolute;
-    z-index: 10;
-}
-
-/* Белый кружок */
-.hotspot-dot {
-    display: block;
-    width: 20px;
-    height: 20px;
-    background: #fff;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    transition: transform 0.3s ease;
-    position: relative;
-}
-
-/* Анимация пульсации вокруг кружка */
-.hotspot-dot::after {
-    content: '';
-    position: absolute;
-    top: -10px; left: -10px; right: -10px; bottom: -10px;
-    border: 2px solid #fff;
-    border-radius: 50%;
-    animation: hotspot-pulse 2s infinite;
-}
-
-@keyframes hotspot-pulse {
-    0% { transform: scale(0.5); opacity: 1; }
-    100% { transform: scale(1.5); opacity: 0; }
-}
-
-/* Карточка товара (по умолчанию скрыта) */
-.hotspot-card {
-    position: absolute;
-    left: 40px; /* Показывается справа от точки */
-    top: -50px;
-    width: 220px;
-    background: #fff;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    opacity: 0;
-    visibility: hidden;
-    transform: translateX(20px);
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    z-index: 20;
-}
-
-.hotspot-card img {
-    width: 70px;
-    height: 70px;
-    object-fit: cover;
-}
-
-.hotspot-info h4 {
-    font-size: 0.85rem;
-    margin-bottom: 5px;
-    font-family: var(--font-serif);
-}
-
-.hotspot-info p {
-    font-size: 0.8rem;
-    color: var(--primary-gold);
-    font-weight: bold;
-}
-
-.hotspot-info a {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    text-decoration: underline;
-    margin-top: 5px;
-    display: block;
-}
-
-/* МАГИЯ: когда чекбокс нажат, показываем карточку */
-.hotspot-input:checked ~ .hotspot-card {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(0);
-}
-
-/* Поворачиваем точку при нажатии */
-.hotspot-input:checked + .hotspot-dot {
-    transform: scale(0.8) rotate(45deg);
-    background: var(--primary-gold);
-}
 
 
 
@@ -1357,6 +1305,17 @@ body {
 .blog-img img { transition: transform 0.5s; width: 100%; height: 250px; }
 .blog-post:hover img { transform: scale(1.05); }
 .blog-post h4 { font-family: var(--font-serif); margin-bottom: 10px; font-size: 1.2rem; }
+.blog-meta {
+    color: var(--text-gray);
+    margin-bottom: 12px;
+}
+.blog-link {
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+    border-bottom: 1px solid currentColor;
+}
 
 
 
@@ -1539,7 +1498,7 @@ body {
 
 /* --- Секция Плюсы --- */
 .benefits-section {
-    background-color: #8b4513; /* Твой коричневый фон из макета */
+    background-color: var(--brand-dark); /* Нейтральный тон для ювелирной тематики */
     padding: 80px 0;
     color: #fff;
     text-align: center;
@@ -1591,7 +1550,7 @@ body {
 
 /* --- Финальный Футер --- */
 .main-footer {
-    background-color: #3d5236;
+    background-color: var(--brand-dark-2);
     color: #fff;
     padding: 80px 0 40px;
     font-family: var(--font-sans);
@@ -1777,6 +1736,14 @@ body {
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.709);
     padding: 15px 0;
+}
+
+.header.header--light {
+    position: sticky;
+    background-color: #fff;
+    backdrop-filter: none;
+    border-bottom: 1px solid var(--brand-line);
+    box-shadow: none;
 }
 
 .header__container {
@@ -1994,3 +1961,40 @@ body {
         gap: 40px;
     }
 }
+
+/* --- Reference-style overrides (global) --- */
+.top-ticker {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #222;
+}
+
+.hero-content { text-align: center; }
+.hero-kicker { text-transform: uppercase; letter-spacing: 3px; font-size: 0.7rem; }
+.hero-content h1 { font-size: 3.5rem; letter-spacing: 2px; }
+.hero-content .btn {
+    background: #fff;
+    color: #111;
+    border: 1px solid #111;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+}
+.hero-content .btn:hover { background: #111; color: #fff; }
+
+.section-title { text-transform: uppercase; letter-spacing: 3px; font-size: 1.1rem; }
+.categories-section { margin: 80px auto; }
+.categories-grid { gap: 30px; }
+.category-name { text-transform: uppercase; letter-spacing: 2px; font-size: 0.75rem; }
+
+.benefits-section { background-color: #111; }
+.benefit-item h3 { color: #d8c3a0; }
+.main-footer { background-color: #0f0f0f; }
+.footer-col h3 { color: #f1ede6; }
+.footer-col ul li a:hover { color: #d8c3a0; }
+.btn-subscribe:hover { background: #d8c3a0; color: #111; }
