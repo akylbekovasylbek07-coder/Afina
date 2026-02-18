@@ -971,3 +971,167 @@
         gap: 28px;
     }
 }
+
+/* === Responsive shop layout === */
+@media (max-width: 1200px) {
+    .page-bracelets .header-inner {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .header-inner {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .shop-nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    .header-icons {
+        justify-content: center;
+    }
+
+    .page-bracelets .hero-inner {
+        gap: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .shop-header {
+        padding: 16px 20px;
+    }
+
+    .affa-logo {
+        font-size: 1.6rem;
+    }
+
+    .shop-container {
+        padding: 0 16px;
+    }
+
+    .page-title {
+        font-size: 1.6rem;
+        margin: 24px 0 36px;
+        letter-spacing: 0.2rem;
+    }
+
+    .sub-categories {
+        gap: 16px;
+        margin-bottom: 40px;
+    }
+
+    .sub-cat-item {
+        width: calc(50% - 8px);
+    }
+
+    .sub-cat-img {
+        height: 90px;
+    }
+
+    .toolbar-inner {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .view-toggles {
+        justify-content: center;
+    }
+
+    .sort-filter-area {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .sort-dropdown,
+    .filter-btn {
+        padding: 8px 12px;
+        font-size: 0.65rem;
+    }
+
+    .products-grid {
+        gap: 24px;
+    }
+
+    .pagination {
+        flex-wrap: wrap;
+    }
+
+    .page-bracelets .hero-copy {
+        text-align: center;
+    }
+
+    .page-bracelets .hero-actions {
+        justify-content: center;
+    }
+
+    .page-bracelets .hero-copy h2 {
+        font-size: 2rem;
+    }
+
+    .page-bracelets .hero-card {
+        padding: 14px;
+    }
+
+    .page-bracelets .hero-card-tag {
+        left: 16px;
+        bottom: 16px;
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 560px) {
+    .header-icons {
+        display: none;
+    }
+
+    .shop-nav {
+        justify-content: flex-start;
+    }
+
+    .sub-cat-item {
+        width: 100%;
+    }
+
+    .sub-cat-img {
+        height: 80px;
+    }
+
+    .page-bracelets .hero-meta {
+        gap: 8px;
+    }
+
+    .page-bracelets .hero-meta span {
+        font-size: 0.6rem;
+    }
+
+    .page-bracelets .product-card {
+        padding: 12px;
+        border-radius: 16px;
+    }
+
+    .page-bracelets .product-title {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .affa-logo {
+        font-size: 1.4rem;
+    }
+
+    .shop-nav a {
+        font-size: 0.6rem;
+        letter-spacing: 1px;
+    }
+
+    .page-bracelets .page-title {
+        font-size: 1.4rem;
+    }
+}

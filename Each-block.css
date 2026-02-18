@@ -100,3 +100,70 @@ body {
   padding: 12px 25px;
   font-weight: 600;
 }
+
+/* === Responsive product page === */
+@media (max-width: 900px) {
+  body {
+    padding: 24px 0;
+  }
+
+  .product-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 24px;
+  }
+
+  .product-images,
+  .product-details {
+    max-width: 100%;
+  }
+
+  .product-details {
+    text-align: center;
+  }
+
+  .product-details h2 {
+    font-size: 20px;
+  }
+
+  .product-details .price {
+    font-size: 18px;
+  }
+
+  .option-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 16px 0;
+  }
+
+  .product-container {
+    padding: 18px;
+    border-radius: 12px;
+  }
+
+  .thumbnail-images {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .thumbnail-images img {
+    width: 60px;
+  }
+
+  .size-input {
+    width: 100%;
+    max-width: 160px;
+  }
+
+  .btn-dark {
+    width: 100%;
+  }
+}
